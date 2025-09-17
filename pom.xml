@@ -16,6 +16,12 @@
     <maven.compiler.release>21</maven.compiler.release>
   </properties>
 
+  <scm>
+    <developerConnection>scp:git:ssh://git@github.com/tirerack/my-app.git</developerConnection>
+    <url>https://github.com/tirerack/my-app</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
