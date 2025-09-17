@@ -29,6 +29,9 @@ pipeline {
         branch 'develop'
         not { expression { hasReleasePluginCommit() } }
       }
+      environment {
+        JFROG_CLI_LOG_LEVEL="DEBUG"
+      }
       agent { label PipelineConstants.AGENT_LABELS.PODMAN }
       steps {
          script {
