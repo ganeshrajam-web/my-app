@@ -22,6 +22,67 @@
     <tag>HEAD</tag>
   </scm>
 
+  <distributionManagement>
+    <repository>
+      <id>maven-release-local</id>
+      <name>tirerack-maven-releases</name>
+      <url>https://tirerack.jfrog.io/artifactory/maven-release-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>maven-snapshot-local</id>
+      <name>tirerack-maven-snapshots</name>
+      <url>https://tirerack.jfrog.io/artifactory/maven-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
+
+<repositories>
+  <repository>
+    <id>central</id>
+    <name>maven-release</name>
+    <url>https://tirerack.jfrog.io/artifactory/maven-release</url>
+    <releases>
+      <enabled>true</enabled>
+      <updatePolicy>always</updatePolicy>
+      <checksumPolicy>warn</checksumPolicy>
+    </releases>
+    <snapshots>
+      <enabled>false</enabled>
+    </snapshots>
+  </repository>
+  <repository>
+    <id>snapshots</id>
+    <name>maven-snapshot</name>
+    <url>https://tirerack.jfrog.io/artifactory/maven-snapshot</url>
+    <releases>
+      <enabled>false</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+      <updatePolicy>always</updatePolicy>
+      <checksumPolicy>warn</checksumPolicy>
+    </snapshots>
+  </repository>
+</repositories>
+
+<pluginRepositories>
+  <pluginRepository>
+    <id>central</id>
+    <name>maven-release</name>
+    <url>https://tirerack.jfrog.io/artifactory/maven-release</url>
+    <snapshots>
+      <enabled>false</enabled>
+    </snapshots>
+  </pluginRepository>
+  <pluginRepository>
+    <id>snapshots</id>
+    <name>maven-snapshot</name>
+    <url>https://tirerack.jfrog.io/artifactory/maven-snapshot</url>
+    <releases>
+      <enabled>false</enabled>
+    </releases>
+  </pluginRepository>
+</pluginRepositories>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
