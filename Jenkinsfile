@@ -27,6 +27,7 @@ pipeline {
       when {
         beforeAgent true
         branch 'develop'
+        not { expression { hasReleasePluginCommit() } }
       }
       agent { label PipelineConstants.AGENT_LABELS.PODMAN }
       steps {
