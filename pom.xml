@@ -22,12 +22,12 @@
 
   <distributionManagement>
     <repository>
-      <id>maven-release-local</id>
+      <id>maven-release</id>
       <name>tirerack-maven-releases</name>
       <url>https://tirerack.jfrog.io/artifactory/maven-release-local</url>
     </repository>
     <snapshotRepository>
-      <id>maven-snapshot-local</id>
+      <id>maven-snapshot</id>
       <name>tirerack-maven-snapshots</name>
       <url>https://tirerack.jfrog.io/artifactory/maven-snapshot-local</url>
     </snapshotRepository>
@@ -35,7 +35,7 @@
 
 <repositories>
   <repository>
-    <id>maven-release-local</id>
+    <id>maven-release</id>
     <name>maven-release-local</name>
     <url>https://tirerack.jfrog.io/artifactory/maven-release</url>
     <releases>
@@ -48,7 +48,7 @@
     </snapshots>
   </repository>
   <repository>
-    <id>maven-snapshot-local</id>
+    <id>maven-snapshot</id>
     <name>maven-snapshot-local</name>
     <url>https://tirerack.jfrog.io/artifactory/maven-snapshot</url>
     <releases>
@@ -64,7 +64,7 @@
 
 <pluginRepositories>
   <pluginRepository>
-    <id>maven-release-local</id>
+    <id>maven-release</id>
     <name>maven-release</name>
     <url>https://tirerack.jfrog.io/artifactory/maven-release</url>
     <snapshots>
@@ -72,7 +72,7 @@
     </snapshots>
   </pluginRepository>
   <pluginRepository>
-    <id>maven-snapshot-local</id>
+    <id>maven-snapshot</id>
     <name>maven-snapshot-local</name>
     <url>https://tirerack.jfrog.io/artifactory/maven-snapshot</url>
     <releases>
