@@ -7,7 +7,7 @@
   <version>1.7-SNAPSHOT</version>
 
   <name>my-app</name>
-  <url>https://xample.com</url>
+  <url>https://ample.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
