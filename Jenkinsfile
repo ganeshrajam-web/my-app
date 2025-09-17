@@ -26,7 +26,7 @@ pipeline {
     stage('Release') {
       when {
         beforeAgent true
-        branch develop
+        branch 'develop'
       }
       agent { label PipelineConstants.AGENT_LABELS.PODMAN }
       steps {
