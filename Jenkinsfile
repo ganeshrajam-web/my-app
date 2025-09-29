@@ -10,6 +10,9 @@ pipeline {
         branch 'develop'
         //not { changelog '.*maven-release-plugin.*' }
       }
+      tools {
+        jfrog 'jfrog-cli-latest'
+      }
       environment {
         JFROG_CLI_LOG_LEVEL="DEBUG"
       }
