@@ -7,8 +7,7 @@ pipeline {
     stage('Release') {
       when {
         beforeAgent true
-        branch 'develop'
-        //not { changelog '.*maven-release-plugin.*' }
+        not { changelog '.*maven-release-plugin.*' }
       }
       tools {
         jfrog 'jfrog-cli-latest'
