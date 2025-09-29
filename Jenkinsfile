@@ -21,7 +21,7 @@ pipeline {
           jf "mvnc --repo-deploy-snapshots maven-snapshot --repo-deploy-releases maven-release --repo-resolve-snapshots maven-snapshot --repo-resolve-releases maven-release"
           jf "mvn clean package"
           jf "mvn -B release:prepare -Dresume=false -DpushChanges=false"
-          sh "mvn release:perform -DlocalCheckout=true"
+          jf "mvn release:perform -DlocalCheckout=true"
         }
       }
     }
