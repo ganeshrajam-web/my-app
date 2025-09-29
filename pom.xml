@@ -83,7 +83,7 @@
 
   <dependencyManagement>
     <dependencies>
-      <dependency>
+    <!--<dependency>
         <groupId>com.tirerack.microservices.commons</groupId>
         <artifactId>commons-dependencies-bom</artifactId>
         <version>0.0.3</version>
@@ -95,7 +95,7 @@
         <artifactId>commons-dev-toolkit</artifactId>
         <version>0.0.2</version>
         <scope>provided</scope>
-      </dependency>
+    </dependency> -->
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
