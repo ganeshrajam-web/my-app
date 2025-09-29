@@ -107,10 +107,10 @@
   </dependencyManagement>
 
   <dependencies>
-    <dependency>
+    <!--<dependency>
       <groupId>com.tirerack.microservices.commons</groupId>
       <artifactId>commons-dev-toolkit</artifactId>
-    </dependency>
+    </dependency> -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
