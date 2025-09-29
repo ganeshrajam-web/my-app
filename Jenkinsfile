@@ -8,7 +8,7 @@ pipeline {
       when {
         beforeAgent true
         branch 'develop'
-        not { changelog '.*maven-release-plugin.*' }
+        //not { changelog '.*maven-release-plugin.*' }
       }
       environment {
         JFROG_CLI_LOG_LEVEL="DEBUG"
