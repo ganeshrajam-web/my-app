@@ -1,41 +1,25 @@
-@Library('jenkins-shared-library@u/jwh/jfrog-testing') _
-import com.tirerack.jenkins.configuration.PipelineConstants
-import com.tirerack.jenkins.configuration.PipelineConfigFactory
-import com.tirerack.jenkins.utils.ModuleNameUtils
-import com.tirerack.jenkins.utils.ChangelogUtils
-import com.tirerack.jenkins.configuration.SlackConfig
-import com.tirerack.jenkins.steps.SlackNotifier
-def project = [
-    name    : 'test',
-    gitUrl  : 'https://github.com/tirerack/my-app',
-]
-def scmConfig = PipelineConfigFactory.scmCheckoutConfig(project.gitUrl)
-def libraryConfig = PipelineConfigFactory.libraryReleaseConfig()
 pipeline {
-  agent none
+  agent any
   options {
     buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '4'))
   }
   stages {
-     stage('SCM Changelog') {
-       agent { label PipelineConstants.AGENT_LABELS.PRIMARY }
-      steps {
-         runScmChangelog(scmConfig)
-      }
-    }
     stage('Release') {
       when {
         beforeAgent true
         branch 'develop'
-        not { expression { hasReleasePluginCommit() } }
+        not { changelog '.*maven-release-plugin.*' }
       }
       environment {
         JFROG_CLI_LOG_LEVEL="DEBUG"
       }
-      agent { label PipelineConstants.AGENT_LABELS.PODMAN }
       steps {
-         script {
-           def version = releaseLibraryModule("my-app", libraryConfig)
+        sh 'git tag | xargs git tag -d'
+        withMaven(jdk: 'openjdk-21', maven: 'default', mavenSettingsConfig: 'jfrog-maven-settings', traceability: true) {
+          jf "mvnc --repo-deploy-snapshots maven-snapshot --repo-deploy-releases maven-release --repo-resolve-snapshots maven-snapshot --repo-resolve-releases maven-release"
+          jf "mvn clean package"
+          jf "mvn -B release:prepare -Dresume=false -DpushChanges=false"
+          jf "mvn release:perform -DlocalCheckout=true"
         }
       }
     }
