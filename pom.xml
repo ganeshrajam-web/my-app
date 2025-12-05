@@ -22,12 +22,12 @@
 
   <distributionManagement>
     <repository>
-      <id>maven-release</id>
+      <id>jfrog-cloud</id>
       <name>tirerack-maven-releases</name>
       <url>https://tirerack.jfrog.io/artifactory/maven-release-local</url>
     </repository>
     <snapshotRepository>
-      <id>maven-snapshot</id>
+      <id>jfrog-cloud</id>
       <name>tirerack-maven-snapshots</name>
       <url>https://tirerack.jfrog.io/artifactory/maven-snapshot-local</url>
     </snapshotRepository>
