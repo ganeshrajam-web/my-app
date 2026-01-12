@@ -36,7 +36,7 @@
 <repositories>
   <repository>
     <id>maven-release</id>
-    <name>maven-release-local</name>
+    <name>maven-release</name>
     <url>https://tirerack.jfrog.io/artifactory/maven-release</url>
     <releases>
       <enabled>true</enabled>
@@ -49,7 +49,7 @@
   </repository>
   <repository>
     <id>maven-snapshot</id>
-    <name>maven-snapshot-local</name>
+    <name>maven-snapshot</name>
     <url>https://tirerack.jfrog.io/artifactory/maven-snapshot</url>
     <releases>
       <enabled>false</enabled>
