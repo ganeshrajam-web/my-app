@@ -4,7 +4,7 @@
 
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
-  <version>1.14</version>
+  <version>1.15-SNAPSHOT</version>
 
   <name>my-app</name>
   <url>https://com</url>
@@ -17,7 +17,7 @@
   <scm>
     <developerConnection>scp:git:ssh://git@github.com/tirerack/my-app.git</developerConnection>
     <url>https://github.com/tirerack/my-app</url>
-    <tag>my-app-1.14</tag>
+    <tag>HEAD</tag>
   </scm>
 
  <distributionManagement>
