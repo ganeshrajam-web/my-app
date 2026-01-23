@@ -20,6 +20,18 @@
     <tag>HEAD</tag>
   </scm>
 
+ <distributionManagement>
+    <repository>
+      <id>hcloud</id>
+      <name>shis-maven-virtual</name>
+      <url>https://hts2.jfrog.io/artifactory/shis-maven-virtual</url>
+    </repository>
+    <snapshotRepository>
+      <id>hcloud</id>
+      <name>shis-maven-virtual</name>
+      <url>https://hts2.jfrog.io/artifactory/shis-maven-virtual</url>
+    </snapshotRepository>
+</distributionManagement>
 
 
   <dependencyManagement>
