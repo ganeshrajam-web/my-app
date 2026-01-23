@@ -15,8 +15,8 @@
   </properties>
 
   <scm>
-    <developerConnection>scp:git:ssh://git@github.com/tirerack/my-app.git</developerConnection>
-    <url>https://github.com/tirerack/my-app</url>
+    <developerConnection>scp:git:ssh://git@github.com/ganeshrajam-web/my-app.git</developerConnection>
+    <url>https://github.com/ganeshrajam-web/my-app</url>
     <tag>HEAD</tag>
   </scm>
 
