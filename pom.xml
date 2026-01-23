@@ -4,7 +4,7 @@
 
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
-  <version>1.16-SNAPSHOT</version>
+  <version>1.16</version>
 
   <name>my-app</name>
   <url>https://com</url>
@@ -17,7 +17,7 @@
   <scm>
     <developerConnection>scp:git:ssh://git@github.com/ganeshrajam-web/my-app.git</developerConnection>
     <url>https://github.com/ganeshrajam-web/my-app</url>
-    <tag>HEAD</tag>
+    <tag>my-app-1.16</tag>
   </scm>
 
 
